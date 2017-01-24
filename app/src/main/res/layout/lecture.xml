@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/test"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <Button
+        android:layout_width="100px"
+        android:layout_height="wrap_content"
+        android:text="Ask Question"
+        android:id="@+id/buttonQuestion"
+        android:onClick="Ask"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/buttonfeedback" />
+
+    <Button
+        android:layout_width="100px"
+        android:layout_height="wrap_content"
+        android:text="Send Feedback"
+        android:id="@+id/buttonfeedback"
+        android:onClick="Send"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/logo"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/imageView"
+        android:layout_alignRight="@+id/buttonfeedback"
+        android:layout_alignEnd="@+id/buttonfeedback">
+
+        <RadioButton android:id="@+id/fast"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Too Fast"
+             android:textColor="#000000"
+             android:buttonTint="#000000"
+             android:onClick="onRadioButtonClicked"
+             android:layout_below="@+id/title_name"
+             android:layout_centerHorizontal="true" />
+
+        <RadioButton android:id="@+id/slow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Too Slow"
+            android:textColor="#000000"
+            android:buttonTint="#000000"
+            android:onClick="onRadioButtonClicked"
+            android:layout_below="@+id/fast"
+            android:layout_alignLeft="@+id/fast"
+            android:layout_alignStart="@+id/fast" />
+
+        <RadioButton android:id="@+id/quiet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Too Quiet"
+            android:textColor="#000000"
+            android:buttonTint="#000000"
+            android:onClick="onRadioButtonClicked"
+            android:layout_below="@+id/title_name"
+            android:layout_centerHorizontal="true" />
+
+        <RadioButton android:id="@+id/follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cannot Follow"
+            android:textColor="#000000"
+            android:buttonTint="#000000"
+
+            android:onClick="onRadioButtonClicked"
+            android:layout_below="@+id/title_name"
+            android:layout_centerHorizontal="true" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="164dp"
+        android:layout_height="77dp"
+        android:textColor="#000000"
+        android:id="@+id/title_name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
